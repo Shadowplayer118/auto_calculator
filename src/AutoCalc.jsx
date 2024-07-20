@@ -21,20 +21,20 @@ const AutoCalc = () => {
     return (
         <>
             <h1>{answer}</h1>
-            <input
+            <input className='p-1 border border-black rounded-xl text-xl font-medium text-center'
                 type="number"
                 value={A}
                 onChange={(e) => setA(parseInt(e.target.value))}
             />
-            <input
+            <input className='p-1 border border-black rounded-xl text-xl font-medium text-center'
                 type="number"
                 value={B}
                 onChange={(e) => setB(parseInt(e.target.value))}
             />
-            <button onClick={() => setOperation('add')}>Add</button>
-            <button onClick={() => setOperation('subtract')}>Subtract</button>
-            <button onClick={() => setOperation('multiplication')}>Multiply</button>
-            <button onClick={() => setOperation('division')}>Divide</button>
+            <button className='rounded-lg bg-green-500 hover:bg-green-900 text-white' onClick={() => setOperation('add')}>Add</button>
+            <button className='rounded-lg bg-red-500 hover:bg-red-900 text-white' onClick={() => setOperation('subtract')}>Subtract</button>
+            <button className='rounded-lg bg-yellow-500 hover:bg-yellow-900 text-white' onClick={() => setOperation('multiplication')}>Multiply</button>
+            <button className='rounded-lg bg-blue-500 hover:bg-blue-900 text-white' onClick={() => setOperation('division')}>Divide</button>
         </>
     );
 }
